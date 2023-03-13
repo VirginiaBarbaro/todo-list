@@ -1,0 +1,142 @@
+.input-modal {
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px;
+}
+
+.modal-form {
+    text-align: center;
+    padding: 15px;
+}
+
+.btn-modal {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.title {
+    align-items: center;
+}
+
+.link-to-details {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.element {
+    display: flex;
+    justify-content: start;
+}
+
+.title-btn {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.back-button {
+    float: left;
+}
+
+.title-card {
+    text-align: start;
+}
+
+.link-to-details:hover {
+    color: black;
+}
+
+.li {
+    list-style-type: none;
+}
+
+.checkbox {
+    margin-right: 50px;
+}
+
+.delete {
+    margin-left: 50px;
+}
+
+.delete:hover {
+    color: red;
+}
+
+.inputText {
+    border-radius: 13px;
+    padding: 7px;
+    width: 85%;
+    margin-right: 15px;
+    background-color: #eee;
+
+    border: 0;
+}
+
+.h2 {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.form-add-product {
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.col1 {
+    display: grid;
+    place-items: center;
+}
+
+.col2 {
+    display: grid;
+    place-items: center;
+}
+
+.col3 {
+    display: grid;
+    place-items: center;
+
+}
+
+.details {
+    display: flex;
+}
+
+.delete {
+    margin-left: 90%;
+    position: relative;
+    top: -10%;
+    font-size: 1.5rem;
+}
+
+.product {
+    font-size: 1.3rem;
+}
+
+.back {
+    float: left;
+}
+
+.linkHome {
+    text-decoration: none;
+    color: #eee;
+}
+
+.linkHome:hover {
+    color: yellowgreen
+}
+
+.logout {
+    text-decoration: none;
+    color: #eee;
+}
+
+.logout:hover {
+    color: red;
+}
