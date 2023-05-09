@@ -3,12 +3,9 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addList } from "../slice/listReducer";
 import ListCard from "./ListCard";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Button } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 
 function Home(props) {
   const [listName, setListName] = useState("");
@@ -20,8 +17,6 @@ function Home(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const handleLogout = () => setUser(null);
 
   const handleSaveList = (e) => {
     e.preventDefault();
@@ -36,42 +31,22 @@ function Home(props) {
     handleClose();
   };
 
-  const handleInputValue = (event) => {
-    event.preventDefault();
-    setListName(event.target.value);
-  };
-
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand>ToBuy</Navbar.Brand>
-          <Nav className="me-auto">
-            <Link to="/settings" className="linkHome mx-2">
-              Settings
-            </Link>
-            <Link to="/home" className="linkHome mx-2">
-              Home
-            </Link>
-            {user && (
-              <button onClick={handleLogout} to="/logout" className="logout mx-2">
-                Logout
-              </button>
-            )}
-          </Nav>
-        </Container>
-      </Navbar>
-      <div className="main-container">
-        <h1>Hacklist</h1>
-        <button
-          className="btn btn-primary m-1"
-          onClick={() => {
-            handleShow();
-          }}
-        >
-          {" "}
-          Add new List
-        </button>
+      <div className="row hero-image"></div>
+      <h1 className="m-auto text-center hero-title">Welcome to hacklist</h1>
+      <div className="container p-3">
+        <div className="d-flex justify-content-center mt-3">
+          <Button
+            className="btn-add-list fs-4"
+            variant="ghost"
+            onClick={() => {
+              handleShow();
+            }}
+          >
+            <i className="bi bi-file-earmark-plus me-2"></i> Add new List
+          </Button>
+        </div>
         <ListCard />
         <Modal
           show={show}
@@ -83,34 +58,33 @@ function Home(props) {
           centered
         >
           <Modal.Header closeButton>
-            <Modal.Title className="title">Title list</Modal.Title>
+            <Modal.Title>Title list</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="modal-body">
             <div className="modal-form">
               <form onSubmit={(e) => handleSaveList(e)}>
                 <label htmlFor="title-list" id="title-list"></label>
-                <input
-                  className="input-modal"
-                  type="text"
+                <Input
+                  variant="flushed"
+                  placeholder="Type your title list.."
                   value={listName}
                   onChange={(e) => setListName(e.target.value)}
-                  placeholder="Type your title list.."
+                  type="text"
+                  name="listName"
+                  className="add-list-input"
                 />
+
+                <div className="btn-modal">
+                  <Button
+                    className="btn-back-modal"
+                    variant="ghost"
+                    onClick={handleClose}
+                  >
+                    <i className="bi bi-arrow-left me-2"></i>
+                    Back home
+                  </Button>
+                </div>
               </form>
-            </div>
-            <div className="btn-modal">
-              <Button variant="secondary" onClick={handleClose}>
-                Back home
-              </Button>
-              <Button
-                variant="primary"
-                onClick={() => {
-                  handleClose();
-                  handleSaveList();
-                }}
-              >
-                Add list
-              </Button>
             </div>
           </Modal.Body>
         </Modal>

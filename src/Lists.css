@@ -1,142 +1,274 @@
-.input-modal {
-    border-radius: 10px;
-    width: 60%;
-    padding: 10px;
+/* General styles  */
+
+:root {
+  --dirty-white: #f2e3db;
+  --light-green: #41644a;
+  --dark-green: #263a29;
+  --orange: #e86a33;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* End general styles */
+
+/* Modal styles  */
+
+.modal-body {
+  background-color: #41644a83;
 }
 
 .modal-form {
-    text-align: center;
-    padding: 15px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.add-list-input::placeholder {
+  color: var(--dark-green);
+}
+
+.btn-back-modal:hover {
+  background-color: var(--dirty-white) !important;
+}
+
+.btn-back-modal {
+  color: #263a29 !important;
+  border: 1px solid var(--dark-green);
+  transition: ease-in-out 0.5s;
+}
+
+.css-18myyv9 {
+  border-bottom: 1px solid var(--dark-green) !important;
 }
 
 .btn-modal {
-    margin-top: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.title {
-    align-items: center;
+/* Card List  */
+
+.delete-list:hover {
+  cursor: pointer;
+  color: red;
 }
 
-.link-to-details {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: space-between;
+.link-header-card:hover {
+  background-color: #e8693360;
+  border-radius: 10px;
+  color: #263a29;
 }
 
-.element {
-    display: flex;
-    justify-content: start;
+.link-header-card {
+  border: 1px solid var(--orange);
+  border-radius: 10px;
+}
+
+/* End List card style  */
+
+/* List details  */
+
+.btn-back {
+  border: 1px solid #263a29;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.btn-back:hover {
+  background-color: #e869334e;
+  color: #263a29;
+}
+
+.box-list-details {
+  backdrop-filter: blur(10px);
+  background-color: #41644a75;
+}
+
+.hero-list-image {
+  background-image: url("/public/back_details.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title-btn {
-    padding: 10px;
-    margin-bottom: 15px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .back-button {
-    float: left;
+  float: left;
 }
 
 .title-card {
-    text-align: start;
+  text-align: start;
 }
 
 .link-to-details:hover {
-    color: black;
+  color: black;
 }
 
 .li {
-    list-style-type: none;
-}
-
-.checkbox {
-    margin-right: 50px;
-}
-
-.delete {
-    margin-left: 50px;
+  list-style-type: none;
 }
 
 .delete:hover {
-    color: red;
+  color: red;
 }
 
 .inputText {
-    border-radius: 13px;
-    padding: 7px;
-    width: 85%;
-    margin-right: 15px;
-    background-color: #eee;
+  border-radius: 13px;
+  padding: 7px;
+  width: 85%;
+  margin-right: 15px;
+  background-color: #eee;
 
-    border: 0;
+  border: 0;
 }
 
 .h2 {
-    width: 30%;
-    margin: auto;
-    text-align: center;
+  width: 30%;
+  margin: auto;
+  text-align: center;
 }
 
 .form-add-product {
-    display: flex;
-    padding: 10px;
-    width: 50%;
-    margin: auto;
+  display: flex;
+  padding: 10px;
+  width: 50%;
+  margin: auto;
 }
 
 .col1 {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .col2 {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .col3 {
-    display: grid;
-    place-items: center;
-
+  display: grid;
+  place-items: center;
 }
 
 .details {
-    display: flex;
+  display: flex;
 }
 
 .delete {
-    margin-left: 90%;
-    position: relative;
-    top: -10%;
-    font-size: 1.5rem;
+  margin-left: 90%;
+  position: relative;
+  top: -10%;
+  font-size: 1.5rem;
 }
 
 .product {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .back {
-    float: left;
+  float: left;
 }
 
 .linkHome {
-    text-decoration: none;
-    color: #eee;
+  text-decoration: none;
+  color: #eee;
 }
 
 .linkHome:hover {
-    color: yellowgreen
+  color: yellowgreen;
 }
 
-.logout {
-    text-decoration: none;
-    color: #eee;
+/* Home styles  */
+
+.hero-image {
+  background-image: url("/public/hero-image.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  filter: brightness(50%);
 }
 
-.logout:hover {
-    color: red;
+.hero-title {
+  font-size: 3rem;
+  position: absolute;
+  color: var(--orange);
+  top: 150px;
+  left: 535px;
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    left: 50px;
+  }
+}
+
+@media (min-width: 530px) {
+  .hero-title {
+    left: 90px;
+  }
+}
+
+@media (min-width: 630px) {
+  .hero-title {
+    left: 150px;
+  }
+}
+
+@media (min-width: 750px) {
+  .hero-title {
+    left: 170px;
+  }
+}
+
+@media (min-width: 800px) {
+  .hero-title {
+    left: 270px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-title {
+    left: 480px;
+  }
+}
+
+.btn-add-list:hover {
+  background-color: #41644a9d !important;
+}
+
+.btn-add-list {
+  color: #263a29 !important;
+  padding: 1.6rem !important;
+  border: 1px solid var(--dark-green);
+  transition: ease-in-out 0.5s;
+}
+
+/* List card  */
+
+@media (max-width: 768px) {
+  .general-card {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 463px) {
+  .general-card {
+    width: 63% !important;
+  }
 }

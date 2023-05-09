@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
 
 const listReducer = createSlice({
@@ -29,10 +29,13 @@ const listReducer = createSlice({
       });
     },
     toggleProduct(state, action) {
-      const selectedList = state.find((list) => action.payload.listId === list.id)
-      const selectedProduct = selectedList.products.find((product) => action.payload.productId === product.productId)
-      selectedProduct.completed = !selectedProduct.completed
-
+      const selectedList = state.find(
+        (list) => action.payload.listId === list.id
+      );
+      const selectedProduct = selectedList.products.find(
+        (product) => action.payload.productId === product.productId
+      );
+      selectedProduct.completed = !selectedProduct.completed;
     },
   },
 });
