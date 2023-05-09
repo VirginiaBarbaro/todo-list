@@ -39,14 +39,16 @@ function ListDetails() {
     <>
       <div className="container">
         <div className="row mt-4">
-          <div className="p-4 col-8 m-auto box-list-details">
+          <div className="p-4 col-10 m-auto box-list-details">
             <div className="d-flex justify-content-around">
               <Link to={"/"}>
                 <button className="btn-back">
                   <i className="bi bi-arrow-left"></i>Back
                 </button>
               </Link>
-              <h2 className="text-center mb-3 m-auto">{list.listName}</h2>
+              <h2 className="text-center mb-3 m-auto">
+                <strong>{list.listName}</strong>
+              </h2>
             </div>
             <form onSubmit={handleAddProduct}>
               <div className="form-add-product">
@@ -57,7 +59,7 @@ function ListDetails() {
                   onChange={(event) => setInputValue(event.target.value)}
                   type="text"
                   name="inputValue"
-                  className="add-list-input"
+                  className="add-list-input-details"
                 />
               </div>
             </form>{" "}
@@ -73,7 +75,7 @@ function ListDetails() {
                         checked={product.completed}
                       />
                     </div>
-                    <div className="col-4 col2">
+                    <div className="col-4 d-flex justify-content-center mt-1">
                       <p
                         className="product"
                         style={{
@@ -87,7 +89,7 @@ function ListDetails() {
                     </div>
                     <div className="col-4 col3">
                       <i
-                        className="bi bi-trash3 delete"
+                        className="bi bi-trash3 delete-item"
                         onClick={() => handleRemoveProduct(product.productId)}
                       ></i>
                     </div>

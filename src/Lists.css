@@ -89,6 +89,18 @@ html {
   color: #263a29;
 }
 
+.add-list-input-details::placeholder {
+  color: var(--dark-green);
+}
+
+.checkbox:checked {
+  background-color: red !important;
+}
+
+.delete-item:hover {
+  color: red !important;
+}
+
 .box-list-details {
   backdrop-filter: blur(10px);
   background-color: #41644a75;
@@ -167,13 +179,6 @@ html {
 
 .details {
   display: flex;
-}
-
-.delete {
-  margin-left: 90%;
-  position: relative;
-  top: -10%;
-  font-size: 1.5rem;
 }
 
 .product {
