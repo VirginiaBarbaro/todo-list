@@ -205,7 +205,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  height: 100vh;
   filter: brightness(50%);
 }
 
@@ -213,8 +213,8 @@ html {
   font-size: 3rem;
   position: absolute;
   color: var(--orange);
-  top: 150px;
-  left: 535px;
+  top: 1rem;
+  left: 9rem !important;
 }
 
 @media (max-width: 992px) {

@@ -14,10 +14,10 @@ function ListCard() {
 
   return (
     <>
-      <div className="container background-container">
+      <div className="container">
         <div className="row">
           <div className="d-flex">
-            <div className="col-4 mt-4 p-2 m-auto general-card">
+            <div className="col-8 mt-4 p-2 m-auto general-card">
               <div>
                 {lists.map((list) => (
                   <>
