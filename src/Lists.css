@@ -16,6 +16,7 @@
 
 html {
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 /* End general styles */
@@ -206,7 +207,26 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vh !important;
   filter: brightness(50%);
+}
+
+@media (min-width: 250px) and (max-width: 991.99px) {
+  .row-flex-general {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-left-img {
+    width: 100% !important;
+  }
+
+  .col-left-img img {
+    width: 100vw !important;
+  }
+
+  .col-right {
+    width: 100% !important;
+  }
 }
 
 .hero-title {
@@ -215,6 +235,13 @@ html {
   color: var(--orange);
   top: 1rem;
   left: 9rem !important;
+}
+
+@media (min-width: 250px) and (max-width: 709px) {
+  .hero-title {
+    left: 75px !important;
+    margin: auto;
+  }
 }
 
 @media (max-width: 992px) {
