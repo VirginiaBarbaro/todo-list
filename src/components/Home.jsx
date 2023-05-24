@@ -51,9 +51,9 @@ function Home(props) {
                 <i className="bi bi-file-earmark-plus me-2"></i> Add new List
               </Button>
             </div>
+            <ListCard />
           </div>
         </div>
-        <ListCard />
         <Modal
           show={show}
           onHide={handleClose}
